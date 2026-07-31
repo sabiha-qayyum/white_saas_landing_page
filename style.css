@@ -38,7 +38,7 @@ body,html{
 .navbar-toggler{
     border: none;
     outline: none;
-    background-color: transparent;
+    background-color:transparent;
 }
 
 .navbar-toggler:focus{
@@ -47,6 +47,7 @@ body,html{
 
 .navbar-toggler-icon{
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    color:purple;
 }
 
 .hero {
@@ -78,10 +79,9 @@ body,html{
 }
 .dots-wrapper{
     position: relative;
-    width: 460px;
-    height: 460px;
-     /* width: 583px;
-    height: 542px; */
+    
+     width: 583px;
+    height: 542px;
 }
 
 .dots-rotator{
@@ -120,16 +120,16 @@ body,html{
 
 .dot{ position: absolute; border-radius: 50%; z-index: 4; }
 
-.dot.outer-1{ width: 34px; height: 34px; background: #FFCB3E; top: 8%;  left: 20%; }
-.dot.outer-2{ width: 30px; height: 30px; background: #3B9DFB; top: 2%;  right: 30%; }
-.dot.outer-3{ width: 30px; height: 30px; background: #FF5C5C; top: 48%; left: 0%;  transform: translateY(-50%); }
-.dot.outer-4{ width: 30px; height: 30px; background: #00C46A; top: 62%; left: 90%; }
-.dot.outer-5{ width: 30px; height: 30px; background: #3B9DFB; top: 88%; left: 20%; }
+.dot.outer-1{ width: 34px; height: 34px; background: #FFCB3E; top: 8%;  left: 30%; }
+.dot.outer-2{ width: 30px; height: 30px; background: #3B9DFB; top: 8%;  right: 30%; }
+.dot.outer-3{ width: 30px; height: 30px; background: #FF5C5C; top: 48%; left: 10%;  transform: translateY(-50%); }
+.dot.outer-4{ width: 30px; height: 30px; background: #00C46A; top: 62%; left: 81%; }
+.dot.outer-5{ width: 30px; height: 30px; background: #3B9DFB; top: 78%; left: 20%; }
 
-.dot.inner-1{ width: 26px; height: 26px; background: #00C46A; top: 17%; left: 46%; }
-.dot.inner-2{ width: 30px; height: 30px; background: #37A3FF; top: 46%; left: 17%;  transform: translateY(-50%); }
-.dot.inner-3{ width: 30px; height: 30px; background: #37A3FF; top: 46%;  right: 17%; transform: translateY(-50%); }
-.dot.inner-4{ width: 28px; height: 28px; background: #FFB25B; top: 76%; left: 44%; }
+.dot.inner-1{ width: 26px; height: 26px; background: #00C46A; top: 22%; left: 46%; }
+.dot.inner-2{ width: 30px; height: 30px; background: #37A3FF; top: 46%; left: 23%;  transform: translateY(-50%); }
+.dot.inner-3{ width: 30px; height: 30px; background: #37A3FF; top: 46%;  right: 23%; transform: translateY(-50%); }
+.dot.inner-4{ width: 28px; height: 28px; background: #FFB25B; top: 72%; left: 46%; }
 @keyframes spin{
     from{ transform: rotate(0deg); }
     to{ transform: rotate(360deg); }
@@ -340,7 +340,7 @@ footer{
 }
 @media (max-width:1152px){
     .navbar-nav,
-    .navbar .d-flex.gap-3{
+    .navbar .hero-btn{
         display: none;
     }
 
@@ -366,53 +366,31 @@ footer{
         text-align: center;
         gap: 15px !important;
     }
-}
-    h1{
+     h1{
         font-size:64px;
     }
     .box-img{
         width:526px;
         height:350px;
     }
-    .app-img {
-         width: 583px;
-    height: 542px;
-
-    }
+   
     .dots-wrapper{
     position: relative;
    
      width: 583px;
     height: 542px;
 }
-
-
-/* ============================================
-   Navbar Toggler Styling
-============================================ */
-.navbar-toggler{
-    border: none;
-    outline: none;
-    background-color: transparent;
 }
-
-.navbar-toggler:focus{
-    box-shadow: none;
-}
-
-.navbar-toggler-icon{
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
+   
 
 
-/* ============================================
-   1152px se neeche: Navbar items + buttons chupein,
-   sirf hamburger icon dikhe
-============================================ */
-@media (max-width: 1152px){
 
+
+
+
+@media (max-width: 768px){
     .navbar-nav,
-    .navbar .d-flex.gap-3{
+    .navbar .hero-btn{
         display: none;
     }
 
@@ -422,7 +400,7 @@ footer{
 
     /* Jab collapse open ho (JS class add karega) to dobara dikhayein */
     .navbar-collapse.show .navbar-nav,
-    .navbar-collapse.show .d-flex.gap-3{
+    .navbar-collapse.show .hero-btn{
         display: flex;
     }
 
@@ -438,57 +416,100 @@ footer{
         text-align: center;
         gap: 15px !important;
     }
-}
-
-/* 1152px se upar: Hamburger hamesha chupa rahe, menu hamesha dikhe */
-@media (min-width: 1153px){
-    .navbar-toggler{
+    .hero-btn button{
         display: none;
     }
 
-    .navbar-collapse{
-        display: flex !important;
-        flex-basis: auto;
+    .navbar-toggler{
+        display: block !important;
     }
+   
+    .hero-heading {
+        padding-top: 20px;
+        display:flex;
+        flex-direction: column;
+        gap:40px; text-align: center;
+        padding-bottom: 20px;
+    }
+    .hero-heading button{
+            margin:auto
+
+
+    }
+
+    h1{
+    font-size:54px;
+   }
+   .box-img{
+    width:551px;
+    height:367px;
+    margin:auto
+   }
+   
+   .work-header{
+    text-align: center;
+   }
+   .work-header button{
+    margin:auto
+   }
+   .row{
+    text-align: center;
+   }
+   .work-section .dots-wrapper{
+    width:454px;
+    height:422px;
+    margin:auto
+
+   }
+   .pricing-plan  .card1{
+    width:472px;
+    height:711px;
+    margin:auto;
+    
+   }
+   .pricing-plan .row{
+    gap:40px
+   }
+   .section-info{
+    text-align: start;
+   }
+   .hundered-of-your-data .app-icon{
+    width:581px;
+    height:287px;
+    margin:auto
+
+}
+.sponsor-icon{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+.orbit-wrapper{
+    width:485px;
+    height:392px;
+    padding-bottom: 40px;
+    margin: auto;
 }
 
+.icon-gmail{ top: 0; left: 50%; transform: translateX(-50%); }
+.icon-dropbox{ top: 130px; left: 80px; }
+.icon-slack{ top: 130px; right: 80px; }
+.icon-outlook{ top: 270px; left: 6px; }
+.icon-drive{ top: 270px; right: 10px; }
+.icon-calendar{ bottom: 8px; left: 50%; transform: translateX(-50%); }
+.what-our-client-say .row{
+    gap:50px;
+    margin:auto
+}
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    gap:40px
+}
+ .footer-botom{
+     display: flex;
+    flex-direction: column;
+    gap:40px
 
-/* ============================================
-   768px se neeche: Columns row ki jagah stack (upar-neeche) ho jayein
-============================================ */
-@media (max-width: 768px){
-
-    .row{
-        flex-direction: column;
-    }
-
-    .col-lg-6,
-    .col-lg-4,
-    .col-lg-5,
-    .col-lg-7,
-    .col-lg-8{
-        width: 100%;
-        max-width: 100%;
-        flex: 0 0 100%;
-    }
-
-    .hero-title{
-        text-align: center;
-        align-items: center;
-    }
-
-    .hero-title h1{
-        font-size: 32px !important;
-    }
-
-    .work-header{
-        text-align: center;
-        align-items: center;
-    }
-
-    .footer-info{
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
+}
 }
