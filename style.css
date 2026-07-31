@@ -513,3 +513,128 @@ footer{
 
 }
 }
+@media (max-width:320px){
+     .navbar-nav,
+    .navbar .hero-btn{
+        display: none;
+    }
+
+    .navbar-toggler{
+        display: block;
+    }
+
+    /* Jab collapse open ho (JS class add karega) to dobara dikhayein */
+    .navbar-collapse.show .navbar-nav,
+    .navbar-collapse.show .hero-btn{
+        display: flex;
+    }
+
+    .navbar-collapse{
+        background-color: #043873;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+
+    .navbar-nav{
+        flex-direction: column;
+        text-align: center;
+        gap: 15px !important;
+    }
+    .hero-btn button{
+        display: none;
+    }
+
+    .navbar-toggler{
+        display: block !important;
+    }
+   
+    .hero-heading {
+        padding-top: 20px;
+        display:flex;
+        flex-direction: column;
+        gap:40px; text-align: center;
+        padding-bottom: 20px;
+    }
+    .hero-heading button{
+            margin:auto
+
+
+    }
+
+    h1{
+    font-size:36px;
+   }
+   .box-img{
+    width:286px;
+    height:191px;
+    margin:auto
+   }
+   
+   .work-header{
+    text-align: center;
+   }
+   .work-header button{
+    margin:auto
+   }
+   .row{
+    text-align: center;
+   }
+   .work-section .dots-wrapper{
+    width:279px;
+    height:259px;
+    margin:auto
+
+   }
+   .pricing-plan  .card1{
+    width:289px;
+    height:642px;
+    margin:auto;
+    
+   }
+   .pricing-plan .row{
+    gap:40px
+   }
+   .section-info{
+    text-align: start;
+   }
+   .hundered-of-your-data .app-icon{
+    width:291px;
+    height:162px;
+    margin:auto
+
+}
+.sponsor-icon{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+.orbit-wrapper{
+    width:286px;
+    height:231px;
+    padding-bottom: 40px;
+    margin: auto;
+}
+
+.icon-gmail{ top: 0; left: 50%; transform: translateX(-50%); }
+.icon-dropbox{ top: 130px; left: 80px; }
+.icon-slack{ top: 130px; right: 80px; }
+.icon-outlook{ top: 270px; left: 6px; }
+.icon-drive{ top: 270px; right: 10px; }
+.icon-calendar{ bottom: 8px; left: 50%; transform: translateX(-50%); }
+.what-our-client-say .row{
+    gap:50px;
+    margin:auto
+}
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    gap:40px
+}
+ .footer-botom{
+     display: flex;
+    flex-direction: column;
+    gap:40px
+
+}
+}
